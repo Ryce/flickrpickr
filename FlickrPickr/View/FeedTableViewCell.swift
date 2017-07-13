@@ -10,9 +10,12 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell, Reusable {
     
+    @IBOutlet var feedImageView: UIImageView!
+    
     var feedItem: FeedItem? {
         didSet {
-            // TODO: setup
+            guard let feedItem = feedItem else { return }
+            feedImageView.loadImage(withUrlString: feedItem.media.urlString)
         }
     }
     
