@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA57F0401F17DAC50084F90C /* FlickrError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57F03F1F17DAC50084F90C /* FlickrError.swift */; };
+		DA57F0431F17DC180084F90C /* FlickrEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57F0421F17DC180084F90C /* FlickrEntry.swift */; };
+		DA7A6D3A1F17D8D300872AF3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7A6D391F17D8D300872AF3 /* Session.swift */; };
+		DA7A6D3C1F17D93100872AF3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7A6D3B1F17D93100872AF3 /* Result.swift */; };
 		DAAA5C9D1F17D8810079A7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA5C9C1F17D8810079A7BC /* AppDelegate.swift */; };
 		DAAA5C9F1F17D8810079A7BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA5C9E1F17D8810079A7BC /* ViewController.swift */; };
 		DAAA5CA21F17D8810079A7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAA5CA01F17D8810079A7BC /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA57F03F1F17DAC50084F90C /* FlickrError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrError.swift; sourceTree = "<group>"; };
+		DA57F0421F17DC180084F90C /* FlickrEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrEntry.swift; sourceTree = "<group>"; };
+		DA7A6D391F17D8D300872AF3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		DA7A6D3B1F17D93100872AF3 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		DAAA5C991F17D8810079A7BC /* FlickrPickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrPickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAA5C9C1F17D8810079A7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAA5C9E1F17D8810079A7BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA57F0411F17DC0A0084F90C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA57F0421F17DC180084F90C /* FlickrEntry.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DA7A6D381F17D8C500872AF3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DA7A6D391F17D8D300872AF3 /* Session.swift */,
+				DA7A6D3B1F17D93100872AF3 /* Result.swift */,
+				DA57F03F1F17DAC50084F90C /* FlickrError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		DAAA5C901F17D8810079A7BC = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +123,8 @@
 		DAAA5C9B1F17D8810079A7BC /* FlickrPickr */ = {
 			isa = PBXGroup;
 			children = (
+				DA57F0411F17DC0A0084F90C /* Model */,
+				DA7A6D381F17D8C500872AF3 /* Networking */,
 				DAAA5C9C1F17D8810079A7BC /* AppDelegate.swift */,
 				DAAA5C9E1F17D8810079A7BC /* ViewController.swift */,
 				DAAA5CA01F17D8810079A7BC /* Main.storyboard */,
@@ -264,6 +292,10 @@
 			files = (
 				DAAA5C9F1F17D8810079A7BC /* ViewController.swift in Sources */,
 				DAAA5C9D1F17D8810079A7BC /* AppDelegate.swift in Sources */,
+				DA7A6D3C1F17D93100872AF3 /* Result.swift in Sources */,
+				DA57F0431F17DC180084F90C /* FlickrEntry.swift in Sources */,
+				DA7A6D3A1F17D8D300872AF3 /* Session.swift in Sources */,
+				DA57F0401F17DAC50084F90C /* FlickrError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +546,7 @@
 				DAAA5CC31F17D8810079A7BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAA5CC41F17D8810079A7BC /* Build configuration list for PBXNativeTarget "FlickrPickrTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +555,7 @@
 				DAAA5CC61F17D8810079A7BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAA5CC71F17D8810079A7BC /* Build configuration list for PBXNativeTarget "FlickrPickrUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +564,7 @@
 				DAAA5CC91F17D8810079A7BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
