@@ -13,21 +13,21 @@ typealias Dict = [String: Any]
 struct Session {
     
     enum Environment {
-        static let endpointUrl = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json")!
+        static let endpointUrl = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1")!
     }
     
-    func fetchFeed(completion: @escaping (Result<Dict>) -> Void) {
+    func fetchFeed(completion: @escaping (Result<Feed>) -> Void) {
         
         var urlRequest = URLRequest(url: Environment.endpointUrl)
         urlRequest.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             
-            var result: Result<Dict>?
+            var result: Result<Feed>!
             
             defer {
                 DispatchQueue.main.async {
-                    completion(result!)
+                    completion(result)
                 }
             }
             
@@ -44,16 +44,18 @@ struct Session {
                 break
             }
             
-            var json: Dict!
+            let feed: Feed
             
             do {
-                json = try self.basicValidation(data, response, error)
-            } catch (let validationError) {
-                result =  .failure(validationError)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                feed = try decoder.decode(Feed.self, from: data!)
+            } catch (let decodingError) {
+                result = .failure(decodingError)
                 return // BAIL
             }
             
-            result = .success(json)
+            result = .success(feed)
         }
         
         task.resume()
