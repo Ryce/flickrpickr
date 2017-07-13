@@ -6,8 +6,6 @@
 //  Copyright © 2017 Hamon Riazy. All rights reserved.
 //
 
-
-
 import UIKit
 
 fileprivate let imageCache = NSCache<AnyObject, AnyObject>()
