@@ -27,7 +27,7 @@ struct FeedItem: Codable {
     var media: Media
     var dateTaken: Date
     var description: String
-    var publishedDate: Date?
+    var publishedDate: Date
     var author: String
     var authorId: String
     var tags: String

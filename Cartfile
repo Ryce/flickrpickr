@@ -1,0 +1,3 @@
+github "judopay/deviceDNA-ios" == 0.1.8
+github "judopay/judokit" == 6.2.14
+github "ryce/flickrpickr-sdk" "master"
