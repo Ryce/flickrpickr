@@ -10,7 +10,7 @@
 		DA8C88781F18E7DC00D298B1 /* flickrpickr-sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8C88761F18E7DC00D298B1 /* flickrpickr-sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA8C88801F18E7F600D298B1 /* SomeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C887F1F18E7F600D298B1 /* SomeClass.swift */; };
 		DA8C88841F18EC3C00D298B1 /* JudoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8C88831F18EC3C00D298B1 /* JudoKit.framework */; };
-		DA8C88861F18EC4C00D298B1 /* DeviceDNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8C88851F18EC4C00D298B1 /* DeviceDNA.framework */; };
+		DA8C88881F18EE6E00D298B1 /* DeviceDNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8C88871F18EE6E00D298B1 /* DeviceDNA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +19,7 @@
 		DA8C88771F18E7DC00D298B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8C887F1F18E7F600D298B1 /* SomeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeClass.swift; sourceTree = "<group>"; };
 		DA8C88831F18EC3C00D298B1 /* JudoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JudoKit.framework; path = Carthage/Build/iOS/JudoKit.framework; sourceTree = "<group>"; };
-		DA8C88851F18EC4C00D298B1 /* DeviceDNA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceDNA.framework; path = Carthage/Build/iOS/DeviceDNA.framework; sourceTree = "<group>"; };
+		DA8C88871F18EE6E00D298B1 /* DeviceDNA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceDNA.framework; path = "Carthage/Checkouts/devicedna-ios/Framework/DeviceDNA.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8C88861F18EC4C00D298B1 /* DeviceDNA.framework in Frameworks */,
+				DA8C88881F18EE6E00D298B1 /* DeviceDNA.framework in Frameworks */,
 				DA8C88841F18EC3C00D298B1 /* JudoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +73,7 @@
 		DA8C88821F18EC2300D298B1 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				DA8C88851F18EC4C00D298B1 /* DeviceDNA.framework */,
+				DA8C88871F18EE6E00D298B1 /* DeviceDNA.framework */,
 				DA8C88831F18EC3C00D298B1 /* JudoKit.framework */,
 			);
 			name = Framework;
@@ -164,7 +164,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/JudoKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/DeviceDNA.framework",
+				"$(SRCROOT)/Carthage/Checkouts/devicedna-ios/Framework/DeviceDNA.framework",
 			);
 			outputPaths = (
 			);
@@ -300,6 +300,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/devicedna-ios/Framework",
 				);
 				INFOPLIST_FILE = "flickrpickr-sdk/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -325,6 +326,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/devicedna-ios/Framework",
 				);
 				INFOPLIST_FILE = "flickrpickr-sdk/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
